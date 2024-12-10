@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(background7.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+}
+
+.clock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px; /* Balanced rectangle */
+    height: 200px; /* Balanced rectangle */
+    padding: 20px;
+    border: 4px solid #754e85;
+    border-radius: 15px;
+    background:
+     linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9)); 
+     /* Add a soft gradient */
+    
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    /* deeper shadow for depth */
+    text-align: center;
+}
+
+.clock h3 {
+    margin: 0;
+    font-size: 28px; 
+    color: #754e85;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Add text shadow */
+    background: linear-gradient(90deg, #6a1b9a, #e1bee7); /* Gradient effect */
+    -webkit-background-clip: text; /* Clip gradient to text */
+    -webkit-text-fill-color: transparent; /* Transparent fill to reveal gradient */
+}
+
+.clock h1 {
+    font-size: 48px; 
+    margin: 15px 0;
+    color: #2c0b36;
+    animation: fadeIn 0.5s ease;
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+
+    }
+}
+
+.buttons {
+    display: flex; /* Align buttons in a row */
+    justify-content: center;
+    gap: 10px; /* Add spacing between buttons */
+    margin-top: 20px; /* Add margin for spacing */
+}
+
+button {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #754e85;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.5s ease, box-shadow 0.3 ease;
+}
+
+button:hover {
+    background-color: #511166;
+    transform: scale(1.1); /* Slight zoom effect */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+     /* add shadow */
+
+
+}
+
+
+
+/* For tablets (screen width 768px to 1024px) */
+@media (max-width: 1024px) {
+    .clock {
+        width: 350px; /* Slightly smaller width */
+        height: 180px; /* Adjust height to maintain proportions */
+    }
+
+    .clock h3 {
+        font-size: 24px; /* Reduce heading size */
+    }
+
+    .clock h1 {
+        font-size: 40px; /* Adjust clock size */
+    }
+
+    button {
+        padding: 8px 20px; /* Smaller buttons */
+        font-size: 14px; /* Smaller font size for buttons */
+    }
+}
+
+/* For mobile devices (screen width 480px to 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Add padding for smaller screens */
+    }
+
+    .clock {
+        width: 300px; /* Compact width */
+        height: 160px; /* Adjust height for balance */
+        padding: 15px; /* Smaller padding */
+    }
+
+    .clock h3 {
+        font-size: 22px; /* Slightly smaller heading */
+    }
+
+    .clock h1 {
+        font-size: 36px; /* Adjust clock size */
+    }
+
+    .buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 8px; /* Reduce gap between buttons */
+    }
+
+    button {
+        width: 100%; /* Full-width buttons */
+        font-size: 14px; /* Smaller font size */
+    }
+}
+
+/* For small mobile devices (screen width less than 480px) */
+@media (max-width: 480px) {
+    .clock {
+        width: 250px; /* Compact width for small screens */
+        height: 140px; /* Adjust height */
+        padding: 15px;
+    }
+
+    .clock h3 {
+        font-size: 18px; /* Reduce heading size */
+    }
+
+    .clock h1 {
+        font-size: 24px; /* Adjust clock size */
+    }
+
+    button {
+        padding: 6px 12px; /* Compact button size */
+        font-size: 12px; /* Smaller font size */
+    }
+}
+
+
+
+
+
+
+
+
+
+
